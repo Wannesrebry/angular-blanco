@@ -1,0 +1,15 @@
+
+<mat-toolbar class="p-bg-color" id="main-header">
+  <button mat-icon-button	(click)="drawer.toggle()">
+      <mat-icon aria-hidden="false" aria-label="Example user verified icon">menu</mat-icon>
+  </button>
+  <span>Name</span>
+</mat-toolbar>
+<div class="container">
+  <mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer mode="side" class="sidenav" opened>Drawer content</mat-drawer>
+    <div class="main-positional-container sidenav-content">
+      <ng-content></ng-content>
+    </div>
+  </mat-drawer-container>
+</div>
